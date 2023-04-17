@@ -54,7 +54,18 @@ namespace LinqCustomTypeProject
 
             Console.WriteLine("+++++++++++++++++");
 
+            int[] someNumbers = { 4, 3, 2, 1 };
 
+            var processedValues = someNumbers
+                .Select(x => x * 2);
+
+            static void ShowElements(IEnumerable<int> values)
+            {
+                foreach (var value in values)
+                {
+                    Console.WriteLine(value);
+                }
+            }
 
         }
     }
